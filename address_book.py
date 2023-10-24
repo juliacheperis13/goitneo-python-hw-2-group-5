@@ -77,7 +77,7 @@ class Record:
             self.phones[index] = Phone(new_phone)
             print(f'Phone is edited: {new_phone}.')
         else:
-            print(f'Phone is not found.')
+            print('Phone is not found.')
             return None
 
     def find_phone(self, phone):
@@ -85,7 +85,7 @@ class Record:
             print(f'Phone is found: {phone}.')
             return phone
         else:
-            print(f'Phone is not found.')
+            print('Phone is not found.')
             return None
 
     def remove_phone(self, phone):
@@ -94,7 +94,7 @@ class Record:
             del self.phones[index]
             print(f'Phone is deleted: {phone}.')
         else:
-            print(f'Phone is not found.')
+            print('Phone is not found.')
 
     def __find_phone_index(self, phone):
         return next((i for i, item in enumerate(self.phones) if item.value == phone), None)
@@ -110,7 +110,6 @@ class AddressBook(UserDict):
         print(f'Record is added to address book: {record}')
 
     def find(self, name):
-        print(self.data[name])
         if name in self.data:
             record = self.data[name]
             print(f'Record is found: {record}')
